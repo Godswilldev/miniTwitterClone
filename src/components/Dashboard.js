@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-// import tweetsReducer from "../Redux/Tweets/TweetReducer";
 
 const Dashboard = () => {
   const tweetReducer = useSelector(({ tweetsReducer }) => tweetsReducer);
@@ -16,7 +15,7 @@ const Dashboard = () => {
       <h3 className="center">
         <ul className="dashboard-list">
           {tweetIds.map((id) => (
-            <li key={id}>{id}</li>
+            <li key={id}>{tweetReducer[id].text}</li>
           ))}
         </ul>
       </h3>
