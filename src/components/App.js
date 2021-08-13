@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import LoadingBar from "react-redux-loading-bar";
 import { handleInitialData } from "../Redux/Features/Shared/SharedAction";
 import Dashboard from "./Dashboard";
 
@@ -13,7 +14,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>starter code </h1>
+      <LoadingBar />
       {loading && <Dashboard />}
     </div>
   );
