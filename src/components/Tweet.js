@@ -63,6 +63,7 @@ const Tweet = ({ id }) => {
             )}
             <p>{text}</p>
           </div>
+
           <div className="tweet-icons">
             <TiArrowBackOutline className="tweet-icon" />
             <span>{replies !== 0 && replies}</span>
