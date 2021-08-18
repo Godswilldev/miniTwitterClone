@@ -33,9 +33,9 @@ const tweetsReducer = (state = initialState, action) => {
       }
 
       return {
-        ...state,
-        [tweet.id]: tweet,
         ...replyingTo,
+        [tweet.id]: tweet,
+        ...state,
       };
 
     default:

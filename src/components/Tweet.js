@@ -7,8 +7,10 @@ import {
   TiHeartFullOutline,
 } from "react-icons/ti/index";
 import { handleToggleTweet } from "../Redux/Features/Tweets/TweetAction";
+import { Link, withRouter } from "react-router-dom";
 
-const Tweet = ({ id }) => {
+const Tweet = (props) => {
+  const { id } = props;
   const dispatch = useDispatch();
 
   const { authedUserReducer, tweetsReducer, usersReducer } = useSelector(
@@ -28,9 +30,10 @@ const Tweet = ({ id }) => {
   const { name, avatar, hasLiked, likes, parent, replies, text, timestamp } =
     tweet;
 
-  const toParent = (e) => {
+  const toParent = (e, id) => {
     e.preventDefault();
     //redirect to the parent tweet
+    props.history.push(`/tweet/${id}`);
   };
 
   const handleLike = (e) => {
@@ -45,7 +48,7 @@ const Tweet = ({ id }) => {
   };
 
   return (
-    <div>
+    <Link to={`/tweet/${id}`}>
       {tweet === null && <p>This tweet doesn't exist</p>}
       <div className="tweet">
         <img src={avatar} alt={name} className="avatar" />
@@ -78,8 +81,8 @@ const Tweet = ({ id }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
-export default Tweet;
+export default withRouter(Tweet);

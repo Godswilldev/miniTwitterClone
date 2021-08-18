@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h3 className="center">Timeline</h3>
+      <h3 className="center">Your Timeline</h3>
       <ul className="dashboard-list">
         {tweetIds.map((id) => (
           <li key={id}>

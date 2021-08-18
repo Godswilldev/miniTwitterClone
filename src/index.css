@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   color: #dfdfdf;
-  /* height: 100vh; */
+  position: relative;
   background-color: rgba(1, 2, 24, 0.892);
   /* background-image: linear-gradient(to right bottom, #007cf0, #00dfd8); */
   /* background-image: linear-gradient(to right, #7928ca, #ff0080); */
@@ -50,13 +50,31 @@ a {
 
 .active {
   font-weight: bold;
+  background-color: #00b5d6;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  transition: 0.3s all;
+}
+
+.nav a {
+  color: #dfdfdf;
 }
 
 .nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   text-decoration: none;
+  padding: 1rem 2rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.nav ul a:hover {
+  transition: 0.3s all;
+  background-color: #009bb6;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .nav li:first-child {
@@ -88,6 +106,9 @@ li {
   border: 1px solid #dad7d7;
   border-radius: 10px;
   cursor: pointer;
+  color: #dfdfdf;
+  position: relative;
+  z-index: -1;
 }
 
 .tweet-info {
