@@ -1,19 +1,21 @@
 # Chirper Project
 
-This repo is a code-along with the first project in the [React Nanodegree program](https://www.udacity.com/course/react-nanodegree--nd019).
+Mini twitter clone with major functionalities like liking a tweet, replying to a tweet, composing a new tweet etc.
+Built with
 
-Most of the commits in this repository correspond to videos in the program.
+- `ReactJs`
+- `Redux`
+- `React-router`
 
 ## Project Setup
 
-* clone the Project - `git@github.com:udacity/reactnd-chirper-app.git`
-* install the dependencies - `npm install`
+- clone the Project - `git clone https://github.com/Godswilldev/miniTwitterClone.git`
+- install the dependencies - `npm install`
+- Start the server - `npm start`
 
 ## Contributing
 
-Because this is a code-along project and the commits correspond to specific videos in the program, we will not be accepting pull requests.
-
-If you feel like there's a major problem, please open an issue to discuss the problem and potential resolution.
+Fork the repo, make changes and send a pull request
 
 ## License
 
